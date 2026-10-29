@@ -74,7 +74,8 @@ def move():
         if not inside(target):
             return
 
-    ontimer(move, 50)
+      # Actualiza cada 25 ms para acelerar el proyectil y los balones.
+    ontimer(move, 25)
 
 
 setup(420, 420, 370, 0)
