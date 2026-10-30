@@ -71,6 +71,10 @@ def move():
     draw()
  for target in targets:
         if not inside(target):
+            return
+
+      # Actualiza cada 25 ms para acelerar el proyectil y los balones.
+    ontimer(move, 25)
             target.x = 200 
             target.y = randrange(-150, 150)
  if not inside(ball):
