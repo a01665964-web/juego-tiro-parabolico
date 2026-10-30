@@ -69,7 +69,15 @@ def move():
             targets.append(target)
 
     draw()
-
+ for target in targets:
+        if not inside(target):
+            target.x = 200 
+            target.y = randrange(-150, 150)
+ if not inside(ball):
+     ball.x = -199 
+     ball.y = -199
+     speed.x = 0
+     speed.y = 0
     ontimer(move, 50)
 
 
@@ -80,6 +88,5 @@ tracer(False)
 onscreenclick(tap)
 move()
 done()
-Logo
 
 
